@@ -1,0 +1,1363 @@
+@charset "utf-8";
+/*
+Theme Name: mm_portfolio 
+*/
+
+body{
+	box-sizing: border-box;
+	font-family: sans-serif;
+	margin: 0;
+}
+
+/***************************base.css*****************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%; /* iphoneで文字サイズが変わる対策 */
+	-ms-text-size-adjust: 100%;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+input, textarea {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th {
+	text-align: left;
+}
+a:focus {
+	outline: none;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	min-height: 1px;
+}
+* html .clearfix {
+	height: 1px;/*¥*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+.both {
+	clear: both;
+}
+.inline_block {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+}
+.pc{
+	display: block;
+}
+.sp{
+	display: none;
+}
+/* ここからWordpress用初期設定 */
+/* 本文中の画像 */
+article img {
+	border: none;
+	max-width: 100%;
+	height: auto;
+}
+.aligncenter {
+	display: block;
+	margin: 30px auto;
+}
+.alignright {
+	float: right;
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+.alignleft {
+	float: left;
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+.wp-caption {
+	max-width: 100%;
+}
+.wp-caption-text {
+	margin: 0;
+	color: #666;
+	font-size: 14px;
+	text-align: center;
+}
+
+.wp-block-image{
+	margin: 0;
+}
+
+/***************************base.css*****************************/
+
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body{
+	color: #2A3639;
+	font-size: 1.4em;
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+	line-height: 1.7;
+	letter-spacing: 0.05em;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+/*変数*/
+:root{
+	--f1: 5.93rem;
+	--f2: 3.67rem;
+	--f3: 2.27rem;
+	--f4: 1.4rem;
+	
+	--basecolor: #EBF3F6;/*ベースカラー*/
+	--subcolor: #A9C2CC;/*サブカラー*/
+	--accolor: #447D92;/*サブカラー*/
+	--fontcolor: #2A3639;/*基本文字色*/
+	--gradient: linear-gradient( 74.7deg,  rgba(34,126,34,1) 5.9%, rgba(99,162,17,1) 86.2% );
+	--myfont: 'Josefin Sans', sans-serif;
+	--myw: 720px; /*標準幅*/
+}
+
+body *,
+body *::before,
+body *::after{
+	box-sizing: inherit;
+	text-align: justify;
+}
+/**************************共通項目******************************/
+
+.container_wide{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+h1{
+	font-size: var(--f2);
+	color: var(--subcolor);
+	text-align: center;
+	margin: 15rem 0 5rem;
+	line-height: 1;
+}
+
+h2,h3{
+	line-height: 1.2;
+}
+
+
+.contact{
+	background-color: var(--basecolor);
+	padding: 5rem 0;
+}
+
+.contact .widget{
+	max-width: 960px;
+	margin: 0 auto;
+} 
+
+.contact .widget h2{
+	font-size: var(--f2);
+	text-align: center;
+	padding-bottom: 5rem;
+	margin: 0;
+} 
+
+.contact .wp-block-group{
+	background: #fff;
+	/*padding: 5rem;*/
+}
+
+.contact .wp-block-group__inner-container {
+	background: #fff;
+    width: 600px;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.wpcf7{
+	margin-top: 5rem;
+}
+
+.wpcf7 p{
+	margin-bottom: 2.5rem;
+}
+
+.wpcf7 span{
+	color:#dc3232;
+	font-size: 1.2rem;
+}
+
+.wpcf7 input,textarea{
+	font-size: 1.6rem;
+	background: var(--basecolor);
+	border: none;
+	width: 100%;
+	padding: 0.75rem;
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+.wpcf7 input{
+	padding: 0.75rem;
+}
+
+.wpcf7 input::placeholder, textarea::placeholder { 
+	opacity: 0.5;
+}
+
+
+.wpcf7 .wpcf7-submit{
+	padding: 1.5rem;
+	width: auto;
+	cursor: pointer;
+	text-align: center;
+	background: var(--accolor);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.wpcf7 form p:nth-last-child(2){
+	text-align: center;
+}
+
+.wpcf7-spinner{
+	display: none;
+} 
+
+.alignwide{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 2rem
+}
+
+/***************************ヘッダー***********************************/
+header{
+	background: rgba(235,243,247,0.9);
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+header nav ul{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+	padding: 2rem;
+	gap: 0 6vw;
+}
+
+header nav ul li{
+	width: 100%;
+	letter-spacing: 0.15rem;
+}
+
+header nav ul li a{
+	display: block;
+	text-align: center;
+}
+
+/**************ホバー時にアンダーラインが中央から左右にスライド******************/
+header nav ul li a {
+	position: relative;
+	text-decoration: none;
+}
+header nav ul li a::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 3px;
+	background: #fff;
+	transition: all .3s ease 0s;
+}
+header nav ul li a:hover{
+	cursor: pointer;
+}
+header nav ul li a:hover::after {
+	width: 100%;
+}
+
+/**********************フッター*************************/
+
+footer{
+	background: #2A3639;
+	color: #fff;
+}
+
+footer .footer-area{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer nav ul{
+	display: flex;
+	list-style-type: none;
+	padding: 1.25rem 0;
+	gap: 0 4vw;
+	font-size: 1.2rem;
+}
+
+footer nav ul li{
+	width: 100%;
+	letter-spacing: 0.15rem;
+}
+
+footer nav ul li a{
+	display: block;
+	text-align: center;
+}
+
+footer .footer-area p{
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+}
+
+/**************ホバー時にアンダーラインが中央から左右にスライド******************/
+footer nav ul li a {
+	position: relative;
+	text-decoration: none;
+}
+footer nav ul li a::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 1px;
+	background: #fff;
+	transition: all .3s ease 0s;
+}
+footer nav ul li a:hover{
+	cursor: pointer;
+}
+footer nav ul li a:hover::after {
+	width: 100%;
+}
+
+/***************************トップページ************************/
+
+
+.top-page .fv{
+	background: var(--basecolor);
+	height: 99vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-page .fv_text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/*margin-top: -10vh;*/
+}
+
+.top-page .fv_text h1{
+	font-size: var(--f1);
+	color: #2A3639;
+	margin: 0;
+	z-index: 1;
+}
+
+.top-page .fv_text p{
+	font-size: var(--f3);
+	z-index: 1;
+	letter-spacing: 0.2rem;
+}
+
+/*********************文字フェードイン**********************/
+.top-page .fv_text{
+  animation: fade 3s linear 0s forwards;/*表示されて1秒後に上線が4秒かけて表示*/
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*枠線が伸びて出現*/
+.line{
+  position: relative; /* 枠線が書かれる基点*/
+}
+
+/*1画目横線*/
+.line::before,
+.line::after{
+  position: absolute;
+  content:"";
+  width: 0;
+  height:10px;
+  background:#fff;/* 枠線の色*/
+}
+
+/*2画目縦線太線*/
+.line2::before,
+.line2::after{
+  position: absolute;
+  content:"";
+  width: 20px;
+  height: 0;
+  background:#fff;/* 枠線の色*/
+}
+
+/*3画目横線*/
+.line3::before,
+.line3::after{
+  position: absolute;
+  content:"";
+  width:0;
+  height:10px;
+  background:#fff;/* 枠線の色*/
+}
+
+/*4画目縦線*/
+.line4::before,
+.line4::after{
+  position: absolute;
+  content:"";
+  width:10px;
+  height: 0;
+  background:#fff;/* 枠線の色*/
+}
+
+
+/*1画目横線*/
+.line::before {
+  bottom:60%;
+  left:0;
+  animation: lineAnime .5s linear 1s forwards;/*表示されて1秒後に上線が0.5秒かけて表示*/
+}
+
+/*2画目縦線太線*/
+.line2::before{ 
+  top:40%;
+  right:66%;
+  animation: lineAnime2 .5s linear 1.5s forwards;/*表示されて1.5秒後に右線が0.5秒かけて表示*/
+}
+
+/*3画目横線*/
+.line3::before { 
+  bottom:40%;
+  right:55%;
+  animation: lineAnime3 .5s linear 2s forwards;/*表示されて2秒後に下線が0.5秒かけて表示*/
+}
+
+/*4画目縦線*/
+.line4::before{ 
+  top:60%;
+  left:20%;
+  animation: lineAnime4 .3s linear 2.5s forwards;/*表示されて2.5秒後に左線が0.5秒かけて表示*/
+}
+
+/*1画目横線*/
+@keyframes lineAnime {
+  0% {width:0%;}
+    100%{width:35%;}
+}
+/*2画目縦線太線*/
+@keyframes lineAnime2 {
+  0% {height:0%;}
+    100%{height:60%;}
+}
+
+/*3画目横線*/
+@keyframes lineAnime3 {
+  0% {width:0%;}
+    100%{width:12%;}
+}
+
+/*4画目縦線*/
+@keyframes lineAnime4 {
+  0% {height:0%;}
+    100%{height:40%;}
+}
+
+
+/*枠線内側の要素*/
+.line .lineinappear{
+  animation: lineInnerAnime .5s linear 1.5s forwards;/*1.5秒後に中央のエリアが0.5秒かけて表示*/
+  opacity: 0;/*初期値を透過0にする*/ 
+}
+
+@keyframes lineInnerAnime{
+  0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+.top-page h2{
+	text-align: center;
+	color: var(--fontcolor);
+	font-size: var(--f2);
+	margin:7.5rem 0 5rem;
+}
+
+.top-page h3{
+	color: var(--subcolor);
+	font-size: var(--f3);
+}
+
+/*********************トップページ_About**********************/
+
+.about .wp-block-group__inner-container{
+	display: flex;
+	justify-content: space-between;
+	gap: 0 7rem;
+}
+
+.about-image .wp-block-group__inner-container{
+	flex-direction: column;
+}
+
+.about-image figure img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+	border-radius: 50%;
+}
+
+.about-text{
+	/*background: #f6f6f6;*/
+}
+
+.about-text .wp-block-group__inner-container{
+	flex-direction: column;
+	gap: 2rem 0;
+}
+
+.about-text >.wp-block-group__inner-container{
+	background: #fff;
+	border: solid 1px var(--subcolor);
+	padding: 1rem;
+	margin-top: 2rem;
+	margin-left: -15rem;
+}
+
+.about-profile .wp-block-group__inner-container{
+	gap: 0;
+}
+
+.about-hobby .wp-block-group__inner-container{
+	gap: 0;
+}
+
+/*********************トップページ_Skills**********************/
+
+.skills {
+	padding-top: 5rem;
+	margin-top: 7.5rem;
+}
+
+.skills h2{
+	margin-top: 0;
+}
+
+.skills-all .wp-block-group__inner-container{
+	display: flex;
+	justify-content: space-between;
+	gap: 0 8rem;
+}
+
+.skills-design .wp-block-group__inner-container{
+	flex-direction: column;
+}
+
+.skills-design h3,
+.skills-front h3{
+	text-align: center;
+	margin-bottom: 1.25rem;
+	color: var(--fontcolor);
+}
+
+.skills-design_description,
+.skills-front_description{
+	margin-bottom: 2.5rem;
+	position: relative;
+}
+
+.skills-design_description img,
+.skills-front_description img{
+	opacity: 0.1;
+	position: absolute;
+	top: 0;
+	left: 35%;
+}
+
+.skills-design_tool .wp-block-group,
+.skills-front_tool .wp-block-group{
+	margin-top: 1.25rem;
+}
+
+.skills-design_tool .wp-block-group figure,
+.skills-front_tool .wp-block-group figure{
+	width: 20%;
+}
+
+.skills-design_tool .wp-block-group p,
+.skills-front_tool .wp-block-group p{
+	width: 80%;
+}
+
+.skills-design_tool figure img,
+.skills-front_tool figure img{
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.skills-front .wp-block-group__inner-container{
+	flex-direction: column;
+}
+
+.wp-block-columns{
+	margin-bottom: 5rem;
+}
+
+/*********************トップページ_Products**********************/
+
+.top_products{
+	display: grid;
+    gap: 15rem 0;
+}
+
+.top_products article{
+	display: flex;
+	justify-content: space-between;
+}
+
+.top_products article figure{
+	width: 65%;
+}
+
+.top_products article figure img{
+	height: 60vh;
+	width: 100%;
+	object-fit: contain;
+}
+
+.top_products article dl{
+	width: 30%;
+}
+
+.top_products article dl h3{
+	font-size: var(--f2);
+	margin-bottom: 2.5rem;
+}
+
+.top_products article dl dt {
+    font-size: var(--f3);
+	color: var(--subcolor);
+}
+
+.top_products h4{
+	font-size: var(--f4);
+	margin-top: 5rem;
+	text-align: right;
+}
+
+.top_products h4 a:hover {
+  color: var(--accolor);
+  transition: 0.3s;	
+}
+/****************ボーダーアニメーション********************/
+.top_products h4{
+	position: relative;
+}
+
+.top_products h4:hover:before{
+	content: '';
+	position: absolute;
+	left: 100%;
+	bottom: 0;
+	width: 0;
+	border-bottom: solid 1px ;
+	transform: translateX(-100%);
+	animation: border_anim 0.3s linear forwards;
+}
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+#top_products .linkBT{
+	text-align: center;
+	margin: 5rem auto 10rem;
+}
+
+#top_products .linkBT a{
+	background: var(--accolor);
+	color: #fff;
+	padding: 1rem 10rem;
+	font-size: var(--f3);
+	border-radius: 3px;
+}
+
+#top_products .linkBT a:hover {
+  background: var(--subcolor);
+  transition: 0.5s;	
+}
+
+/*********************拡大させるホバーアクション**********************/
+
+.top_products article figure {
+	overflow: hidden;
+	border: 3px solid #f6f6f6;
+	box-sizing: border-box;
+	background: #f6f6f6;
+}
+.top_products article figure img {
+	vertical-align: bottom;
+	margin: 0;
+	transition: all 0.3s linear 0s;
+}
+.top_products article figure img:hover {
+	cursor: pointer;
+	transform: scale(1.1, 1.1);
+}
+
+
+
+/********************************作品詳細ページ**********************************/
+
+.detail h2{
+	font-size: var(--f3);
+	margin-bottom: 5rem;
+}
+
+
+.detail{
+	display: flex;
+	justify-content: space-between;
+	gap: 0 2.5rem;
+}
+
+.detail_text{
+	width: 55%;
+} 
+
+.detail_img{
+	width: auto;
+} 
+
+.detail dl dt{
+	font-size: var(--f4);
+	font-weight: 700;
+	text-decoration: underline;
+	margin-top: 2.5rem;
+}
+
+.detail dl dd a{
+	color: var(--accolor);
+}
+
+.detail dl dd a:hover {
+  color: var(--subcolor);
+  transition: 0.3s;	
+}
+
+.detail_img figure img {
+    height: auto;
+    width: 100%;
+	object-fit: cover;
+}
+
+.post-navigation .nav-links{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 5rem;
+	margin: 7.5rem 0 5rem;
+}
+
+.nav-links .nav-previous a,
+.nav-links .nav-next a{
+	display: block;
+}
+
+.nav-links .nav-previous a{
+	border: solid 1px;
+	font-size: var(--f4);
+	padding: 1rem 10rem;
+}
+
+
+.nav-links .nav-next a{
+	background: var(--accolor);
+	color: #fff;
+	font-size: var(--f4);
+	padding: calc(1rem + 1px) calc(10rem + 1px); 
+	border: solid 1px;
+}
+
+.detail.linkBT{
+	font-size: var(--f4);
+	text-decoration: underline;
+	margin-bottom: 2.5rem;
+}
+
+.detail.linkBT a:hover {
+  color: var(--subcolor);
+  transition: 0.3s;	
+}
+
+/*********************ボタンのスライドアニメーション**********************/
+
+.nav-links .nav-next a {
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 50%,
+    var(--accolor) 50%,
+    var(--accolor) 100%
+  );
+  /*box-shadow: 0 3px 10px rgb(0 0 0 / 16%);*/
+  transition: background-position ease 0.3s;
+}
+
+.nav-links .nav-next a:hover{
+  background-position: 0 0;
+  color: var(--fontcolor);
+  border: solid 1px;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+
+.nav-links .nav-previous a {
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: -100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to left,
+    #fff 0%,
+    #fff 50%,
+	var(--accolor) 0%,
+    var(--accolor) 100%
+  );
+  /*box-shadow: 0 3px 10px rgb(0 0 0 / 16%);*/
+  transition: background-position ease 0.3s;
+}
+
+.nav-links .nav-previous a:hover{
+  background-position: 0 0;
+  color: #fff;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+/******************************記事一覧************************/
+.postlist{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 5rem 0;
+}
+
+
+.postlist article{
+	width: 32%;
+}
+
+.postlist img{
+	height: 21rem;
+	width: 100%;
+	object-fit: contain;
+}
+
+.postlist h2{
+	font-size: var(--f4);
+}
+
+.pagination .nav-links ul{
+	display: flex;
+	justify-content: center;
+	gap: 0 1rem;
+	align-items: center;
+	margin: 7.5rem 0;
+	font-size: var(--f4);
+	color: var(--accolor);
+}
+
+.dashicons{
+	vertical-align: middle;
+}
+
+.pagination .nav-links ul li .page-numbers{
+	display: block;
+	padding: 0.5em 1em;
+	border: solid 1px;
+}
+
+.pagination .nav-links ul li .next.page-numbers,
+.pagination .nav-links ul li .prev.page-numbers
+{
+	display: block;
+	padding: 0;
+	border: none;
+}
+
+
+.pagination .current {
+    color: #fff;
+	background: var(--accolor);
+}
+
+.pagination .nav-links ul li a:hover {
+    color: #fff;
+    background: var(--accolor);
+	transition: 0.5s;
+}
+
+/*********************拡大させるホバーアクション**********************/
+
+.postlist article figure {
+	overflow: hidden;
+	border: 3px solid #f6f6f6;
+	box-sizing: border-box;
+	background: #f6f6f6;
+}
+.postlist article figure img {
+	vertical-align: bottom;
+	margin: 0;
+	transition: all 0.5s linear 0s;
+}
+.postlist article figure img:hover {
+	transform: scale(1.1, 1.1);
+}
+
+/******************************制作過程一覧************************/
+.diary-list{
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 7.5rem;
+}
+
+.diary-list article{
+	padding: 2.5rem 0;
+}
+
+.diary-list article:nth-of-type(2n){
+	background: #f6f6f6;
+}
+
+.diary-list article{
+	width: 51%;
+}
+
+.diary-list h2{
+	font-size: var(--f3);
+	text-align: center; 
+}
+
+.diary-list.linkBT{
+	font-size: var(--f3);
+	text-decoration: underline;
+	margin-bottom: 2.5rem;
+}
+
+.diary-list.linkBT a:hover {
+  color: var(--subcolor);
+  transition: 0.3s;	
+}
+
+/********************************制作過程詳細ページ**********************************/
+
+
+
+.diary-page h1{
+	font-size: var(--f2);
+	margin-bottom: 5rem;
+	margin: 0;
+	text-align: left;
+	color: var(--fontcolor);
+}
+
+.diary-page h2{
+	font-size: var(--f3);
+	text-decoration: underline;
+	margin-top: 2.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.diary-page ol{
+	list-style-type: auto;
+}
+
+.diary-page ol li{
+	margin-left: 2rem;
+}
+
+
+.diary-page{
+	
+}
+
+.diary-page_text{
+	
+} 
+
+
+.diary-page  img {
+	margin: 1.25rem 0;
+    border: 1px solid var(--fontcolor);
+}
+
+.diary-page .wp-caption-text{
+	margin-bottom: 1.25rem;
+	text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	
+	
+	
+/*1画目横線*/
+.line::before {
+  bottom: 47%;
+  left:0;
+}
+
+/*2画目縦線太線*/
+.line2::before{
+  top: 53%;
+  right:66%;
+}
+
+/*3画目横線*/
+.line3::before {
+  bottom: 39%;
+  right:55%;
+}
+
+/*4画目縦線*/
+.line4::before{
+  top: 70%;
+  left:20%;
+}
+
+}
+/******************************@media screen and (max-width: 1024px)****************************************/
+@media screen and (max-width: 600px) {
+	
+	
+/*****************fv***************/
+
+
+	
+/*1画目横線*/
+.line::before {
+  bottom: 55%;
+  left:0;
+}
+
+/*2画目縦線太線*/
+.line2::before{
+  top: 45%;
+  right:66%;
+}
+
+/*3画目横線*/
+.line3::before { 
+  bottom:35%;
+  right:45%;
+}
+
+/*4画目縦線*/
+.line4::before{
+  top: 60%;
+  left:10%;
+}
+
+
+　/*一画目*/
+@keyframes lineAnime {
+  0% {width:0%;}
+    100%{width:35%;}
+}
+	
+/*縦方向の線*/
+@keyframes lineAnime2 {
+  0% {height:0%;}
+    100%{height:60%;}
+}
+
+/*3画目*/
+@keyframes lineAnime3 {
+  0% {width:0%;}
+    100%{width:21%;}
+}
+
+/*縦方向の線*/
+@keyframes lineAnime4 {
+  0% {height:0%;}
+    100%{height:40%;}
+}
+	
+	
+/*****************About me***************/
+	.about .wp-block-group__inner-container {
+    flex-direction: column;
+}
+
+	.about-text h3{
+		text-align:center;
+	}
+	
+	.about-text >.wp-block-group__inner-container {
+    border: none;
+    padding: 1rem;
+    margin: 0;
+}
+/*****************Skills***************/
+.skills-all .wp-block-group__inner-container {
+    flex-direction: column;
+}
+	
+	.skills-design_description img, .skills-front_description img {
+    left: 30%;
+}
+	
+	
+	
+/*****************Products***************/
+	.top_products article {
+    flex-direction: column;
+}
+	
+	
+	
+	.top_products article figure {
+    width: 100%;
+}
+	.top_products article dl {
+    width: 100%;
+}
+
+	.top_products article figure img {
+    height: 21rem;
+}
+
+    #top_products .linkBT a {
+    padding: 1rem 3rem;
+}
+	
+/*******************作品一覧*********************/
+	.postlist article {
+    width: 100%;
+}
+	
+/*******************作品詳細*********************/
+     .detail {
+     flex-direction: column-reverse;
+}
+	
+	.detail h2 {
+    margin-bottom: 0; 
+}
+
+	.detail_img figure img {
+    height: 25rem;
+    object-fit: contain;
+}
+
+	.detail_img {
+    width: 100%;
+}
+
+	.detail_text {
+    width: 100%;
+}
+	
+	.post-navigation .nav-links {
+    flex-direction: column;
+    gap: 3rem;
+}
+	
+	.detail.linkBT {
+    font-size: var(--f4);
+}
+	
+/*******************制作過程詳細ページ*********************/
+	.diary-list article {
+    width: 100%;
+}
+	
+/*****************Contact***************/
+.contact .wp-block-group {
+    background: var(--basecolor);
+}
+	.contact {
+    padding-bottom: 0;
+		
+}
+
+	.contact .wp-block-group {
+    padding: 5rem 2rem;
+}
+	
+	.contact .wp-block-group__inner-container {
+    width: auto;
+		background: var(--basecolor);
+		padding: 0;
+}
+
+	.contact .widget h2 {
+    padding-bottom: 0rem;
+}
+	
+	.wpcf7 input, textarea {
+    width: 100%;
+		background: #fff;
+}
+
+	.wpcf7 .wpcf7-submit {
+	padding: 2rem 5rem;
+	color: #fff;
+	font-weight: normal;
+}
+
+	.wpcf7 p:nth-last-child(2) {
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+	.wpcf7 p:nth-last-child(2) span{
+    display: none;
+}
+
+/*****************フッター***************/
+	footer .footer-area {
+    flex-direction: column;
+	gap: 1rem;
+}
+	
+	}
+/******************************@media screen and (max-width: 600px)****************************************/
+
+
+
+/**************************************
+
+ここからグーテンベルクの設定
+
+**************************************/
+.alignleft{
+	float: left;
+	margin-left: 0;
+	margin-right: 1em;
+}
+
+.alignright{
+	float: right;
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+.aligncenter{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-categories.aligncenter,
+.wp-block-latest-posts.aligncenter,
+.wp-block-archives.aligncenter,
+.wp-block-tag-cloud.aligncenter,
+.wp-block-latest-comments.aligncenter,
+.wp-block-rss.aligncenter{
+	text-align: center;
+}
+
+figure{
+	margin-left: 0;
+	margin-right: 0;
+}
+/**************************************
+
+ここまでグーテンベルクの設定
+
+**************************************/
+
+

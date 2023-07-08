@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+body,
+.editor-post-title_input{
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: #2A3639;
+	line-height: 1.7;
+	letter-spacing: 0.05em;
+}
+/*変数*/
+:root{
+	--f1: 59.3px;
+	--f2: 36.7px;
+	--f3: 22.7px;
+	--f4: 14px;
+	
+	--basecolor: #EBF3F6;/*ベースカラー*/
+	--subcolor: #A9C2CC;/*サブカラー*/
+	--accolor: #447D92;/*サブカラー*/
+	--gradient: linear-gradient( 74.7deg,  rgba(34,126,34,1) 5.9%, rgba(99,162,17,1) 86.2% );
+	--myfont: 'Josefin Sans', sans-serif;
+	--myw: 720px; /*標準幅*/
+}
+
+ p{
+	line-height: 1.8;
+	font-size: var(--f4);
+}
+
+ h1{
+	font-size: var(--f2);
+}
+
+ h2{
+	font-size: var(--f2);
+}
+
+ h3{
+	font-size: var(--f3);
+}
+
+ h4{
+	font-size: var(--f4);
+}
+
+ h5{
+	font-size: var(--f4);
+}
+
+ h6{
+	font-size: var(--f4);
+}
+
+/*-----------------------横幅-------------------------*/
+.wp-block:not([data-align="full"]):not([data-align="wide"]){
+	max-width: calc(720px + 30px);
+}
+
+.wp-block[data-align="wide"]{
+	max-width: calc( 1020px + 30px);
+}
+
